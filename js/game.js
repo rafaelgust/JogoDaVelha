@@ -4,13 +4,15 @@ symbols = ['o', 'x'];
 endGame = false;
 
 function move(position){
-    if(endGame){
-        return;
-    }
+    if(endGame){return;}
     if(board[position] === ''){
         board[position] = symbols[playerTime];
         endGame = isWin();
-        playerTime === 0 ? playerTime = 1 : playerTime = 0;
+        if(!endGame){
+            playerTime === 0 ? playerTime = 1 : playerTime = 0;
+        }else{
+            alert('Fim de game')
+        }
     }
 }
 
@@ -33,7 +35,7 @@ function isWin(){
         let p2 = seq[1];
         let p3 = seq[2];
 
-        if(board[p1] === board[p2] && board[p1] === board[p3]){
+        if(board[p1] === board[p2] && board[p1] === board[p3] && board[p1] !== ''){
             return true;
         }
 
