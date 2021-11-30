@@ -16,3 +16,29 @@
     border: 1px solid gray;
     cursor: pointer;
 }
+
+.o, .x{
+    position: relative;
+}
+
+.o::after{
+    content: '\2B55';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font-size: 60px;
+    list-style: 100px;
+}
+
+.x::after{
+    content: '\2716';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font-size: 60px;
+    list-style: 100px;
+}
