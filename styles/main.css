@@ -10,17 +10,34 @@
             user-select: none;
 }
 
+body{
+    background-color: brown;
+}
+
+h1{
+    text-align: center;
+    color: white;
+    margin: 20px auto;
+}
+
 .stage{
     text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
 }
 
 .square{
     display: inline-block;
     width: 100px;
     height: 100px;
-    background-color: aqua;
-    border: 1px solid gray;
+    background-color: #d7d7d7;
+    border-radius: 10px;
     cursor: pointer;
+}
+
+.square:hover{
+    background-color: white;
 }
 
 .o, .x{
@@ -28,23 +45,54 @@
 }
 
 .o::after{
-    content: '\2B55';
+    content: '\1F436';
     position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    font-size: 60px;
-    list-style: 100px;
+    font-size: 35px;
+    line-height: 100px;
 }
 
 .x::after{
-    content: '\2716';
+    content: '\1F431';
     position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    font-size: 60px;
-    list-style: 100px;
+    font-size: 35px;
+    line-height: 100px;
+}
+
+.btn{
+    text-align: center;
+    margin: 10px auto;
+}
+
+.btn button{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(30, 93, 210);
+    color: white;
+}
+
+.btn button:hover{
+    background-color: rgba(30, 93, 210, 0.568);
+}
+
+.result{
+    text-align: center;
+    margin: 20px auto;
+    width: 200px;
+}
+
+.result div{
+    background: #ffeb3b;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 25px;
 }

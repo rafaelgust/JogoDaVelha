@@ -1,5 +1,9 @@
 
 let squares = document.querySelectorAll('.square');
+let again = document.querySelector('.btn button');
+let result = document.querySelector('.result');
+
+again.addEventListener('click', restart);
 
 document.addEventListener('DOMContentLoaded', ()=> {
     squares.forEach((square) => {
@@ -22,4 +26,11 @@ function update(){
 
         if(symbol !== ''){square.innerHTML = `<div class="${symbol}"></div>`;}
     });
+}
+
+function clearDiv(){
+    result.innerHTML = '';
+    squares.forEach((square) => {
+        square.innerHTML = '';
+    });       
 }
